@@ -1,12 +1,11 @@
 *Files to look at*:
-- [Extensions](./CS/AspNetCoreDashboardCustomPropertiesSample/wwwroot/Content/Extensions)
-- [_Layout.cshtml](./CS/AspNetCoreDashboardCustomPropertiesSample/Pages/_Layout.cshtml)
-- [Index.cshtml](./CS/AspNetCoreDashboardCustomPropertiesSample/Pages/Index.cshtml)
+- [extensions](./dashboard-angular-app/src/app/dashboard/extensions)
+- [dashboard.component.ts](./dashboard-angular-app/src/app/dashboard/dashboard.component.ts)
 
-# ASP.NET Core Dashboard - Custom Properties
+# HTML JavaScript Dashboard - Custom Properties
 
 
-The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard.
+The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard. ASP.NET Core dashboard control is a server application, HTML JavaScript Dashboard control is added to an Angular application and is used as a client.
 
 ## Overview
 
