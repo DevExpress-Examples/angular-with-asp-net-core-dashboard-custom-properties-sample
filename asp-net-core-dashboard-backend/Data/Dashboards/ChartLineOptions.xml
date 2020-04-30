@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Chart Line Options Custom Property" />
+  <DataSources>
+    <SqlDataSource Name="SalesPerson" ComponentName="DataSource1">
+      <Connection Name="NWindConnectionString" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="SalesPerson">
+        <Tables>
+          <Table Name="SalesPerson" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="SalesPerson" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+      <CalculatedFields>
+        <CalculatedField Name="Extended Price" Expression="ToDecimal([ExtendedPrice])" DataType="Auto" DataMember="SalesPerson" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem2" Name="Custom dash style for series lines" DataSource="DataSource1" DataMember="SalesPerson">
+      <CustomProperties>
+        <ScaleBreaks>false</ScaleBreaks>
+      </CustomProperties>
+      <DataItems>
+        <Measure DataMember="Extended Price" FilterString="[DataItem2] = 2015" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
+        <Dimension DataMember="OrderDate" DefaultId="DataItem2" />
+        <Measure DataMember="Extended Price" FilterString="[DataItem2] = 2014" DefaultId="DataItem3" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem2" />
+      </HiddenDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Extended Price (2015)" SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+              <CustomProperties>
+                <DashStyleProperty>dashdot</DashStyleProperty>
+              </CustomProperties>
+            </Simple>
+            <Simple Name="Extended Price (2014)" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+              <CustomProperties>
+                <DashStyleProperty>longDash</DashStyleProperty>
+              </CustomProperties>
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem1" Name="Default dash style for series lines" DataSource="DataSource1" DataMember="SalesPerson">
+      <CustomProperties>
+        <ScaleBreaks>false</ScaleBreaks>
+      </CustomProperties>
+      <DataItems>
+        <Measure DataMember="Extended Price" FilterString="[DataItem2] = 2015" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
+        <Dimension DataMember="OrderDate" DefaultId="DataItem2" />
+        <Measure DataMember="Extended Price" FilterString="[DataItem2] = 2014" DefaultId="DataItem3" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem2" />
+      </HiddenDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Extended Price (2015)" SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple Name="Extended Price (2014)" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutGroup Orientation="Vertical" Weight="165.41070082893745">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="165.41070082893745" />
+        <LayoutItem DashboardItem="chartDashboardItem2" Weight="165.41070082893745" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
