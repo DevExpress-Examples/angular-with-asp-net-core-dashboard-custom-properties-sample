@@ -7,6 +7,21 @@
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard. ASP.NET Core dashboard control is a server application, HTML JavaScript Dashboard control is added to an Angular application and is used as a client.
 
+## Run the Project
+
+In the **asp-net-core-dashboard-backend** folder run the following command:
+
+```
+dotnet run
+```
+
+In the **dashboard-angular-app** folder, run the following commands:
+
+```
+npm i
+ng serve --open
+```
+
 ## Overview
 
 Custom properties are stored in the **CustomProperties** collection in a structured format. Each custom property in this collection contains the custom property's metadata. 
@@ -70,21 +85,6 @@ export class DashboardComponent implements AfterViewInit, OnDestroy {
     this.dashboardControl && this.dashboardControl.dispose();
   }
 }
-```
-
-## Run the Project
-
-In the **asp-net-core-dashboard-backend** folder run the following command:
-
-```
-dotnet run
-```
-
-In the **dashboard-angular-app** folder, run the following commands:
-
-```
-npm i
-ng serve --open
 ```
 
 ## Example structure
