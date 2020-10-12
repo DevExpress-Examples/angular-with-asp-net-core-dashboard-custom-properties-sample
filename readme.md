@@ -1,6 +1,7 @@
 *Files to look at*:
-- [extensions](./dashboard-angular-app/src/app/dashboard/extensions)
-- [dashboard.component.ts](./dashboard-angular-app/src/app/dashboard/dashboard.component.ts)
+- [extensions](./dashboard-angular-app/src/app/extensions)
+- [app.component.html](./dashboard-angular-app/src/app/app.component.html)
+- [app.component.ts](./dashboard-angular-app/src/app/app.component.ts)
 
 # HTML JavaScript Dashboard - Custom Properties
 
