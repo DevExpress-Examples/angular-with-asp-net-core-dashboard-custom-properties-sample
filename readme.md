@@ -48,9 +48,18 @@ To apply custom property values to a dashboard, you need to create an extension.
 
 To register an extension, import extension modules and call the `registerExtension` method before the control is rendered:
 
+```html
+<dx-dashboard-control
+  style='display: block;width:100%;height:800px;'
+  endpoint='http://localhost:5000/api'
+  workingMode='Designer'
+  (onBeforeRender)='onBeforeRender($event)'
+>
+</dx-dashboard-control>
+```
+
 ```ts
-import { Component, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
-import { DashboardControl, ResourceManager } from 'devexpress-dashboard';
+import { DashboardControl, DashboardControlArgs } from 'devexpress-dashboard';
 import { ChartScaleBreaksExtension } from './extensions/chart-scale-breaks-extension';
 import { ChartLineOptionsExtension } from './extensions/chart-line-options-extension';
 import { ChartAxisMaxValueExtension } from './extensions/chart-axis-max-value-extension';
@@ -60,29 +69,17 @@ import { DashboardDescriptionExtension } from './extensions/dashboard-descriptio
 
 // ...
 
-export class DashboardComponent implements AfterViewInit, OnDestroy {
-  private dashboardControl!: DashboardControl;
-  constructor(private element: ElementRef) {
-    ResourceManager.embedBundledResources();
-  }
-  ngAfterViewInit(): void {
-    this.dashboardControl = new DashboardControl(this.element.nativeElement.querySelector(".dashboard-container"), {
-      // Specifies a URL of the Web Dashboard's server.
-      endpoint: "http://localhost:5000/api",
-      workingMode: "Designer",
-    });
+export class AppComponent {
+  title = 'dashboard-angular-app';
 
-    this.dashboardControl.registerExtension(new ChartScaleBreaksExtension(this.dashboardControl))
-    this.dashboardControl.registerExtension(new ChartLineOptionsExtension(this.dashboardControl))
-    this.dashboardControl.registerExtension(new ChartAxisMaxValueExtension(this.dashboardControl))
-    this.dashboardControl.registerExtension(new ChartConstantLinesExtension(this.dashboardControl))
-    this.dashboardControl.registerExtension(new ItemDescriptionExtension(this.dashboardControl))
-    this.dashboardControl.registerExtension(new DashboardDescriptionExtension(this.dashboardControl))
-
-    this.dashboardControl.render();
-  }
-  ngOnDestroy(): void {
-    this.dashboardControl && this.dashboardControl.dispose();
+  onBeforeRender(args: DashboardControlArgs) {
+    var dashboardControl = args.component;
+    dashboardControl.registerExtension(new ChartScaleBreaksExtension(dashboardControl));
+    dashboardControl.registerExtension(new ChartLineOptionsExtension(dashboardControl));
+    dashboardControl.registerExtension(new ChartAxisMaxValueExtension(dashboardControl));
+    dashboardControl.registerExtension(new ChartConstantLinesExtension(dashboardControl));
+    dashboardControl.registerExtension(new ItemDescriptionExtension(dashboardControl));
+    dashboardControl.registerExtension(new DashboardDescriptionExtension(dashboardControl));
   }
 }
 ```
