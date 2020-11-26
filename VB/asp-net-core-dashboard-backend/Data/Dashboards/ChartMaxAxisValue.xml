@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Chart Axis Max Value Property" />
+  <DataSources>
+    <SqlDataSource Name="SalesPerson" ComponentName="DataSource1">
+      <Connection Name="NWindConnectionString" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="SalesPerson">
+        <Tables>
+          <Table Name="SalesPerson" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="SalesPerson" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+      <CalculatedFields>
+        <CalculatedField Name="Extended Price" Expression="ToDecimal([ExtendedPrice])" DataType="Auto" DataMember="SalesPerson" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem2" Name="Customized Chart - The Y-axis max value is bound to a hidden measure" DataSource="DataSource1" DataMember="SalesPerson">
+      <CustomProperties>
+        <AxisMaxValueEnabled>true</AxisMaxValueEnabled>
+        <AxisMaxValueIsBound>true</AxisMaxValueIsBound>
+        <AxisMaxValueDataItem>DataItem3</AxisMaxValueDataItem>
+      </CustomProperties>
+      <DataItems>
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Country" DefaultId="DataItem2" />
+        <Measure DataMember="UnitPrice" DefaultId="DataItem3" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem3" />
+      </HiddenMeasures>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem3" Name="Original Chart" DataSource="DataSource1" DataMember="SalesPerson">
+      <DataItems>
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Country" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem1" Name="Customized Chart - The Y-axis max value is a constant value (30000)" DataSource="DataSource1" DataMember="SalesPerson">
+      <CustomProperties>
+        <AxisMaxValueEnabled>true</AxisMaxValueEnabled>
+        <AxisMaxValueConstant>30000</AxisMaxValueConstant>
+      </CustomProperties>
+      <DataItems>
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Country" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutGroup Orientation="Vertical" Weight="165.41070082893745">
+        <LayoutItem DashboardItem="chartDashboardItem3" Weight="165.41070082893745" />
+        <LayoutGroup Weight="165.41070082893745">
+          <LayoutItem DashboardItem="chartDashboardItem2" Weight="165.41070082893745" />
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="165.41070082893745" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
