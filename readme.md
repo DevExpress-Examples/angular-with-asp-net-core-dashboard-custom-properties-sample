@@ -3,8 +3,7 @@
 - [app.component.html](./dashboard-angular-app/src/app/app.component.html)
 - [app.component.ts](./dashboard-angular-app/src/app/app.component.ts)
 
-# HTML JavaScript Dashboard - Custom Properties
-
+# Dashboard Component for Angular - Custom Properties
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard. ASP.NET Core dashboard control is a server application, HTML JavaScript Dashboard control is added to an Angular application and is used as a client.
 
@@ -91,6 +90,8 @@ The following example contains a set of custom properties that demonstrate diffe
 
 ### ChartScaleBreaksExtension
 
+[View Extension](./dashboard-angular-app/src/app/extensions/chart-scale-breaks-extension.ts)
+
 This extension enables or disables scale breaks for the Chart dashboard item.
 
 ![](images/ChartScaleBreaksExtension.png)
@@ -101,6 +102,8 @@ This extension enables or disables scale breaks for the Chart dashboard item.
 
 ### ChartLineOptionsExtension
 
+[View Extension](./dashboard-angular-app/src/app/extensions/chart-line-options-extension.ts)
+
 This extension changes the dash style of each series line in the Chart dashboard item.
 
 ![](images/ChartLineOptionsExtension.png)
@@ -110,6 +113,8 @@ This extension changes the dash style of each series line in the Chart dashboard
 - Integrates a _Line Options (Custom)_ section into the data item menu with the [SelectBox](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxSelectBox/) widget as an editor.
 
 ### DashboardDescriptionExtension
+
+[View Extension](./dashboard-angular-app/src/app/extensions/dashboard-description-extension.ts)
 
 This extension enables you to set a dashboard's description in the dashboard menu. The dashboard description is displayed when you hover over the info button in the dashboard title. 
 
@@ -122,6 +127,8 @@ This extension enables you to set a dashboard's description in the dashboard men
 
 ### ItemDescriptionExtension
 
+[View Extension](./dashboard-angular-app/src/app/extensions/item-description-extension.ts)
+
 This extension enables you to set a description for each dashboard item. The dashboard item description is displayed when you hover over the info button in the item's caption. 
 
 ![](images/ItemDescriptionExtension.png)
@@ -133,6 +140,8 @@ Overview:
 
 ### ChartAxisMaxValueExtension
 
+[View Extension](./dashboard-angular-app/src/app/extensions/chart-axis-max-value-extension.ts)
+
 This extension allows you to change the maximum value of the Y-axis in the Chart item. 
 
 ![](images/ChartAxisMaxValueExtension.png)
@@ -143,6 +152,8 @@ Overview:
 - Shows how to enable or disable editors depending on a custom property's value. 
 
 ### ChartConstantLinesExtension
+
+[View Extension](./dashboard-angular-app/src/app/extensions/chart-constant-lines-extension.ts)
 
 This extension draws constant lines for the Chart dashboard item.
 
@@ -156,8 +167,8 @@ Overview:
 
 ## Documentation
 
-- [Client-Side Customization](https://docs.devexpress.com/Dashboard/401701/designer-and-viewer-applications/web-dashboard/client-side-customization?v=20.1)
-- [Custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1)
+- [Client-Side Customization](https://docs.devexpress.com/Dashboard/401701)
+- [Custom properties](https://docs.devexpress.com/Dashboard/401702)
 
 ## More Examples
 
