@@ -3,7 +3,7 @@
 - [app.component.html](./dashboard-angular-app/src/app/app.component.html)
 - [app.component.ts](./dashboard-angular-app/src/app/app.component.ts)
 
-# Dashboard Component for Angular - Custom Properties
+# Dashboard for Angular - Custom Properties
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard. ASP.NET Core dashboard control is a server application, an Angular application is used as a client.
 
