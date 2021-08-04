@@ -169,6 +169,7 @@ Overview:
 
 - [Client-Side Customization](https://docs.devexpress.com/Dashboard/401701)
 - [Custom Properties](https://docs.devexpress.com/Dashboard/401702)
+- [Install DevExpress Controls Using NuGet Packages](https://docs.devexpress.com/GeneralInformation/115912/installation/install-devexpress-controls-using-nuget-packages)
 
 ## More Examples
 
