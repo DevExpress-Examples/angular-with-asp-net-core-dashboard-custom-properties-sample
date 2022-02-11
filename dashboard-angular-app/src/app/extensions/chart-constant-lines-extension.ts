@@ -1,13 +1,12 @@
-import * as Dashboard from 'devexpress-dashboard'
-import * as Model from 'devexpress-dashboard/model'
-import * as Designer from 'devexpress-dashboard/designer'
+import * as Dashboard from 'devexpress-dashboard';
+import * as Model from 'devexpress-dashboard/model';
+import * as Designer from 'devexpress-dashboard/designer';
 import dxForm, { dxFormOptions } from 'devextreme/ui/form';
 import dxPopup from 'devextreme/ui/popup';
 import dxButton from 'devextreme/ui/button';
 import dxToolbar from 'devextreme/ui/toolbar';
 import DataSource from 'devextreme/data/data_source';
 import dxList, { dxListOptions } from 'devextreme/ui/list';
-
 
 // 1. Model
 var chartConstantLinesProperty: Model.CustomPropertyMetadata = {
@@ -85,7 +84,7 @@ function showPopup(chartItem) {
         contentTemplate: function(contentContainer) {
             var formContainer = document.createElement('div');
             var formOptions = getFormOptions(chartItem);
-            this._form = new dxForm(formContainer, formOptions);
+            new dxForm(formContainer, formOptions);
             return formContainer;
         },
         onHidden: function() {
@@ -144,8 +143,7 @@ function createListAndToolbar(form, chartItem) {
                     setValue(chartItem, constantLines);  
                     list.reload();
                     list.option('selectedItem', constantLines[constantLines.length - 1]);
-                    
-                },
+                }
             }
         },
         {

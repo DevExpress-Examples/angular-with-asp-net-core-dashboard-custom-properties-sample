@@ -1,6 +1,6 @@
-import * as Dashboard from 'devexpress-dashboard'
-import * as Model from 'devexpress-dashboard/model'
-import * as Designer from 'devexpress-dashboard/designer'
+import * as Dashboard from 'devexpress-dashboard';
+import * as Model from 'devexpress-dashboard/model';
+import * as Designer from 'devexpress-dashboard/designer';
 
 // 1. Model
 var autoScaleBreaksProperty: Model.CustomPropertyMetadata = {
