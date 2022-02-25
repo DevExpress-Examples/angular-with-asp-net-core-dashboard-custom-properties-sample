@@ -22,7 +22,7 @@ In the **asp-net-core-dashboard-backend** folder run the following command:
 dotnet run
 ```
 
-The server starts at `http://localhost:5000` and the client gets data from `http://localhost:5000/api/dashboard`. To debug the server, run the **asp-net-core-server** application in Visual Studio and change the client's `endpoint` property according to the listening port: `https://localhost:44301/api/dashboard`.
+The server starts at `http://localhost:5000` and the client gets data from `http://localhost:5000/api/dashboard`. To debug the server, run the **asp-net-core-dashboard-backend** application in Visual Studio and change the client's `endpoint` property according to the listening port: `https://localhost:44301/api/dashboard`.
 
 See the following section for information on how to install NuGet packages from the DevExpress NuGet feed: [Install DevExpress Controls Using NuGet Packages](https://docs.devexpress.com/GeneralInformation/115912/installation/install-devexpress-controls-using-nuget-packages).
 
