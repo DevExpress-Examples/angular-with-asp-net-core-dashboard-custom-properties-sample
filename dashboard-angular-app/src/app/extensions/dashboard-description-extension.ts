@@ -90,13 +90,6 @@ function showPopup(dashboardControl) {
     });
     popup.show();
 }
-function createMenuItem(dashboardControl) {
-    var menuItem = new Designer.DashboardMenuItem(name, "Description  (Custom)", 9999, 68);
-    menuItem.disabled = ko.computed(function () { return !dashboardControl.dashboard() });
-
-    menuItem.click = function () { showPopup(dashboardControl) };
-    return menuItem;
-}
 
 // 4. Event Subscription
 export class DashboardDescriptionExtension {
@@ -105,7 +98,15 @@ export class DashboardDescriptionExtension {
     menuItem: Designer.DashboardMenuItem;
 
     constructor(private dashboardControl: Dashboard.DashboardControl) {
-        this.menuItem = createMenuItem(dashboardControl)
+        this.menuItem = this.createMenuItem()
+    }
+
+    createMenuItem() {
+      var menuItem = new Designer.DashboardMenuItem(this.name, "Description  (Custom)", 9999, 68);
+      menuItem.disabled = ko.computed(() => { return !this.dashboardControl.dashboard() });
+
+      menuItem.click = () => { showPopup(this.dashboardControl) };
+      return menuItem;
     }
 
     start() {
