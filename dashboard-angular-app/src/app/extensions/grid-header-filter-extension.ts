@@ -1,4 +1,3 @@
-
 import { DashboardControl, ItemWidgetOptionEventArgs, ViewerApiExtension } from  'devexpress-dashboard';
 import { CustomizeSectionsEventArgs, FormItemTemplates, OptionsPanelExtension } from 'devexpress-dashboard/designer';
 import { CustomPropertyMetadata, GridItem, registerCustomProperty } from 'devexpress-dashboard/model';
@@ -51,12 +50,12 @@ export class GridHeaderFilterExtension {
     }
     _onCustomizeSections = (args: CustomizeSectionsEventArgs) => {
         args.addSection({
-            title: 'Header filter (Custom)',
+            title: 'Header Filter (Custom)',
 
             items: [{
                 dataField: enabledHeaderFilterProperty.propertyName,
                 label: {
-                    text: 'Header filter'
+                    text: 'Header Filter'
                 },
                 template: FormItemTemplates.buttonGroup,
                 editorOptions: {
