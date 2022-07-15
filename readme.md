@@ -3,14 +3,16 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T885564)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-*Files to look at*:
-- [extensions](./dashboard-angular-app/src/app/extensions)
-- [app.component.html](./dashboard-angular-app/src/app/app.component.html)
-- [app.component.ts](./dashboard-angular-app/src/app/app.component.ts)
 
 # Dashboard for Angular - Custom Properties
 
 The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard. ASP.NET Core dashboard control is a server application, an Angular application is used as a client.
+
+## Files to Look At
+
+- [extensions](./dashboard-angular-app/src/app/extensions)
+- [app.component.html](./dashboard-angular-app/src/app/app.component.html)
+- [app.component.ts](./dashboard-angular-app/src/app/app.component.ts)
 
 ## Quick Start
 
