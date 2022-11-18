@@ -13,10 +13,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Hosting;
 
 namespace AspNetCoreDashboardCustomPropertiesSample {
     public class Startup {
-        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment) {
+        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             string dataDirectoryPath = Path.Combine(hostingEnvironment.ContentRootPath, "Data");
             AppDomain.CurrentDomain.SetData("DataDirectory", dataDirectoryPath);
 
@@ -83,8 +84,7 @@ namespace AspNetCoreDashboardCustomPropertiesSample {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
-            app.UseCors("AllowAnyOrigin");
+        public void Configure(IApplicationBuilder app,IWebHostEnvironment env) {
             app.UseDevExpressControls();
             if(env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
@@ -94,11 +94,11 @@ namespace AspNetCoreDashboardCustomPropertiesSample {
             }
             app.UseStaticFiles();
             app.UseSession();
-            app.UseMvc(routes => {
-                routes.MapDashboardRoute("api", "DefaultDashboard");
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+            app.UseRouting();
+            app.UseCors("AllowAnyOrigin");
+            app.UseEndpoints(endpoints => {
+                endpoints.MapDashboardRoute("api", "DefaultDashboard");
+                endpoints.MapControllers().RequireCors("AllowAnyOrigin");
             });
         }
     }
