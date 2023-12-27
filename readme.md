@@ -115,7 +115,7 @@ This extension enables or disables scale breaks for the Chart dashboard item.
 
 **Overview**:
 - Adds a custom Boolean property for a specific dashboard item (Chart).
-- Integrates a _Scale breaks (Custom)_ section into the _Options_ menu with the [CheckBox](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxCheckBox/) widget as an editor.
+- Integrates a _Scale breaks (Custom)_ section into the _Options_ menu with the [dxCheckBox](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxCheckBox/) widget as an editor.
 
 ### ChartLineOptionsExtension
 
@@ -127,7 +127,7 @@ This extension changes the dash style of each series line in the Chart dashboard
 
 **Overview**:
 - Adds a string custom property for a specific data item container (Chart's series).
-- Integrates a _Line Options (Custom)_ section into the data item menu with the [SelectBox](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxSelectBox/) widget as an editor.
+- Integrates a _Line Options (Custom)_ section into the data item menu with the [dxSelectBox](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxSelectBox/) widget as an editor.
 
 ### DashboardDescriptionExtension
 
@@ -140,7 +140,7 @@ This extension enables you to set a dashboard's description in the dashboard men
 **Overview**:
 - Adds a custom string property for a dashboard.
 - Shows how to add a new item to the [ToolBox](https://docs.devexpress.com/Dashboard/117442/designer-and-viewer-applications/web-dashboard/ui-elements/toolbox?v=20.1). In this example, a new item is added to the [dashboard menu](https://docs.devexpress.com/Dashboard/117444/designer-and-viewer-applications/web-dashboard/ui-elements/dashboard-menu?v=20.1).
-- Demonstrates how to create complex editors using templates. In this example, it is the [](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxPopup/) widgets with the [TextArea](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxTextArea/) and [Button](https://js.devexpress.com/DevExtreme/ApiReference/UI_Widgets/dxButtonGroup/) widgets inside.
+- Demonstrates how to create complex editors using templates. In this example, it is the [dxPopup](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxPopup/) widgets with the [dxTextArea](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxTextArea/) and [dxButton](https://js.devexpress.com/jQuery/Documentation/ApiReference/UI_Components/dxButton/) widgets inside.
 
 ### ItemDescriptionExtension
 
