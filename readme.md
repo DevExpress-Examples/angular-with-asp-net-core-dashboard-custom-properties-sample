@@ -7,7 +7,7 @@
 
 # Dashboard for Angular - Custom Properties
 
-The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties?v=20.1) for the Web Dashboard. ASP.NET Core dashboard control is a server application, an Angular application is used as a client.
+The example shows how to create [custom properties](https://docs.devexpress.com/Dashboard/401702/designer-and-viewer-applications/web-dashboard/client-side-customization/custom-properties) for the Web Dashboard. ASP.NET Core dashboard control is a server application, an Angular application is used as a client.
 
 ## Files to Look At
 
@@ -50,7 +50,7 @@ To apply custom property values to a dashboard, you need to create an extension.
 
 1. Model.
 
-    The model is an object that contains the property name, type, and default value. It also specifies on which level the property is created (dashboard, dashboard item or data item container). Use the [Model.registerCustomProperty](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.Model.registerCustomProperty-1?v=20.1) property to register the custom property definition.
+    The model is an object that contains the property name, type, and default value. It also specifies on which level the property is created (dashboard, dashboard item or data item container). Use the [Model.registerCustomProperty](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.Model.registerCustomProperty-1?) property to register the custom property definition.
 
 2. Viewer
 
@@ -222,3 +222,4 @@ Overview:
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
