@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { DxDashboardControlModule } from 'devexpress-dashboard-angular';
 import { DashboardControl, DashboardControlArgs, DashboardPanelExtension} from 'devexpress-dashboard';
 import { ChartScaleBreaksExtension } from './extensions/chart-scale-breaks-extension';
@@ -14,7 +13,7 @@ import { GridHeaderFilterExtension } from './extensions/grid-header-filter-exten
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, DxDashboardControlModule],
+  imports: [CommonModule, DxDashboardControlModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

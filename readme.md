@@ -19,7 +19,7 @@ The example shows how to create [custom properties](https://docs.devexpress.com/
 
 ### Server
 
-In the **asp-net-core-dashboard-backend** folder run the following command:
+In the *asp-net-core-dashboard-backend* folder, run the following command:
 
 ```
 dotnet run
@@ -33,11 +33,11 @@ See the following section for information on how to install NuGet packages from 
 
 ### Client
 
-In the **dashboard-angular-app** folder, run the following commands:
+In the *dashboard-angular-app* folder, run the following commands:
 
 ```
-npm i
-ng serve --open
+npm install
+npm start
 ```
 
 Open ```http://localhost:4200/``` in your browser to see the Web Dashboard application.
