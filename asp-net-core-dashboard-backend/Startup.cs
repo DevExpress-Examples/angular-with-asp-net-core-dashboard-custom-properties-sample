@@ -23,7 +23,6 @@ namespace AspNetCoreDashboardCustomPropertiesSample {
 
             Configuration = configuration;
             FileProvider = hostingEnvironment.ContentRootFileProvider;
-            DashboardExportSettings.CompatibilityMode = DashboardExportCompatibilityMode.Restricted;
         }
 
         public IFileProvider FileProvider { get; }
